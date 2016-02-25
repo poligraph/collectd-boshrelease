@@ -7,6 +7,7 @@ templates:
   bin/collectd_ctl: bin/collectd_ctl
   config/collectd.conf.erb: config/collectd.conf
   collectd.d/config.conf.erb: collectd.d/config.conf
+  collectd.d/network.conf.erb: collectd.d/network.conf
   data/properties.sh.erb: data/properties.sh
   helpers/ctl_setup.sh: helpers/ctl_setup.sh
   helpers/ctl_utils.sh: helpers/ctl_utils.sh
@@ -27,6 +28,14 @@ properties:
   collectd.hostname_prefix:
     default: ""
     description: "A prefix used in the hostname (suffixed by `job.index`)."
+
+  collectd.server.address:
+    default: "127.0.0.1"
+    description: "collectd server ip address"
+
+  collectd.server.port:
+    default: "25826"
+    description: "collectd server port"
 
   collectd.config:
     default: ""
